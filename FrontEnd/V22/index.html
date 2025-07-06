@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizing Units</title>
+
+    <style>
+
+        body{
+            font-size: 12px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 100vw;
+            background-color: aquamarine;
+            margin: 23px 10px;
+            /* vw - % width on screen */
+            /* vh - % height on screen */
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 100vw;
+            background-color: aquamarine;
+            margin: 23px 10px;
+            font-size: 18px;
+        }
+
+        .container p{
+            font-size: 1em; /* 1em = 18px */
+            /* 1em = 100% of the font size of the parent element */
+        }
+
+        .container p{
+            font-size: 2em; /* 2em = 36px */
+            /* 2em = 200% of the font size of the parent element */;
+        }
+
+        .container p{
+            font-size: 2rem; /* 2rem = 24px */
+            /* 2rem = 200% of the font size of the root element (html) */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi sunt inventore eaque, nobis velit cupiditate earum quidem ducimus!
+        </p>
+    </div>
+</body>
+</html>

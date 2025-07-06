@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizing units</title>
+
+    <style>
+        .cont{
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            /* <!-- 
+            vmin and vmax are CSS units that represent a percentage of the viewport's dimensions. 
+            - `vmin`: Represents 1% of the smaller dimension (either the viewport's width or height).
+            - `vmax`: Represents 1% of the larger dimension (either the viewport's width or height).
+            These units are useful for creating responsive designs that adapt to the size of the viewport.
+            --> */
+            width: 100vmin; /* in pc, vmin = vh */
+            height: 100vmax; /* in pc, vmax = vw */
+            /* 100vmin = 100% of the smaller dimension of the viewport (either width or height) */
+            /* 100vmax = 100% of the larger dimension of the viewport (either width or height) */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="cont">
+        I am a container.
+    </div>
+</body>
+</html>

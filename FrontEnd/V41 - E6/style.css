@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav{
+    display: flex;
+    height: 100px;
+}
+
+.left{
+    margin-left: 150px;
+    padding-top: 20px;
+    width: 345px;
+}
+
+.right{
+    width: 100%;
+}
+
+img{
+    width: 176px;
+}
+
+ul{
+    height: 75%;
+    display: flex;
+    align-items: center;
+    padding-left: 210px;
+    padding-top: 17px;
+    color: rgb(55, 54, 54);
+}
+
+li{
+    list-style: none;
+    padding: 0 30px;
+}

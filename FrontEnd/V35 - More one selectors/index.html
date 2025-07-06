@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    
+    <style>
+        :root{
+            --c1: red;
+            --c2: yellow;
+            --c3: lightgreen;
+        }
+/* 
+        .box:first-child{
+            background-color: var(--c1);
+        } */
+
+        /* .box::first-letter{
+            color: var(--c3);
+        }
+
+        .box:first-line{
+            color: var(--c2);
+        } */
+
+        .boxes *{
+            color: var(--c3);
+            border: 2px solid black;
+        }
+
+        /* p, a, .x, [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 10px;
+            background-color: var(--c2);
+            border: 2px solid black;
+        } */
+
+        .data::before{
+            content: "This is a before data attribute";
+            color: var(--c1);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .data::after{
+            content: "This is an after data attribute";
+            color: var(--c3);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .box::selection{
+            background-color: greenyellow;
+            color: var(--c1);
+        }
+
+        input::placeholder{
+            color: var(--c1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">Hey, I am a box!
+        </div>
+        <div class="box">Hey, I am a box!
+        </div>
+        <div class="box">Hey, I am a box!
+        </div>
+
+        <input type="text" placeholder="Type Your Name here...">
+    </div>
+
+    <br><br>
+
+    <div class="data">
+        <div data-color="primary" class="x">Testing Data</div>
+        <div class="x">Testing Data</div>
+        <div class="x">Testing Data</div>
+    </div>
+</body>
+</html>
