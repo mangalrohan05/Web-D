@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+        .container{
+            background-color: rgb(49, 235, 235);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box{
+            background-color: rgb(255, 0, 0);
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            width: 50px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            /* animation-name: myAnimation;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0, 0, 0, 0.92);
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            animation-direction: alternate; */
+            /* animation: myAnimation 0.2s ease-in 0.2s infinite alternate; */
+
+            /* animation: myAnimation 1s ease 0.2s infinite alternate forwards; */
+            
+            animation: myAnimation 1s ease 0.2s infinite        alternate forwards,
+            ani2 2s ease 0.2s infinite alternate;
+        }
+
+        @keyframes myAnimation {
+            from{
+                background-color: red;
+            }
+
+            to{
+                transform: translateX(100px);
+                background-color: yellow;
+            }
+        }
+
+        @keyframes ani2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>

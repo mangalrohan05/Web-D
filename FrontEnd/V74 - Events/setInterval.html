@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeout</title>
+    <style>
+        .container{
+            background-color: rgb(195, 255, 0);
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container"></div>
+
+    <script>
+        // Using setInterval to change the background color of the container every second
+        const container = document.querySelector('.container');
+        let colorIndex = 0;
+        const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+
+        const intervalId = setInterval(() => {
+            container.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length; // Cycle through colors
+        }, 1000);
+
+        // Using setTimeout to stop the interval after 10 seconds
+        // Timeout runs once after the specified time   
+        setTimeout(() => {
+            clearInterval(intervalId);
+            console.log('Interval cleared after 10 seconds');
+        }, 10000);
+    </script>
+</body>
+</html>

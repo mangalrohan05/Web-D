@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E14 - Hacker's Terminal</title>
+
+    <style>
+
+        body{
+            color:rgb(70, 2, 2);
+        }
+
+        .container{
+            width: 500px;
+            height: 600px;
+            background-color: green;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid rgb(35, 13, 13);
+        }
+
+        .message{
+            padding: 10px;
+            font-weight: bold;
+            opacity: 0;
+        }
+
+        span::after {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            text-align: left;
+            animation: blink 1.5s steps(3, end) infinite;
+        }
+
+        @keyframes blink {
+            0%   { content: ''; }
+            33%  { content: '.'; }
+            66%  { content: '..'; }
+            100% { content: '...'; }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="message m1">Initialising Hacking<span></span></div>
+        <div class="message m2">Reading your files<span></span></div>
+        <div class="message m3">Password Files detected<span></span></div>
+        <div class="message m4">Sending all passwords and files to server<span></span></div>
+        <div class="message m5">Cleaning up<span></span></div>
+
+    </div>
+
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 2 seconds:
+    
+    - Initialising Hacking...
+    - Reading your files...
+    - Password Files detected...
+    - Sending all passwords and files to server...
+    - Cleaning up...
+
+    The three dots (...) must blink
+    -->
+
+    <script src="script.js"></script>
+</body>
+</html>
